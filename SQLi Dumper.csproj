@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{C9AAC708-5CCB-408E-91BF-89D62D3710BC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SQLi Dumper</RootNamespace>
+    <AssemblyName>SQLi Dumper</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>SQLi Dumper.ico</ApplicationIcon>
+    <StartupObject>Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChilkatDotNet46">
+      <HintPath>..\..\ChilkatDotNet46.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="SkinSoft.VisualStyler">
+      <HintPath>..\..\SkinSoft.VisualStyler.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddURLs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddURLs.Designer.cs">
+      <DependentUpon>AddURLs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizer.Designer.cs">
+      <DependentUpon>Analizer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyzer.cs" />
+    <Compile Include="AppDomainControl.cs" />
+    <Compile Include="ControlButton.cs" />
+    <Compile Include="Cryptor\Method.cs" />
+    <Compile Include="DataBase\InjectionFormat.cs" />
+    <Compile Include="DataBase\InjectionType.cs" />
+    <Compile Include="DataBase\MSSQL.cs" />
+    <Compile Include="DataBase\MySQLCollactions.cs" />
+    <Compile Include="DataBase\MySQLErrorType.cs" />
+    <Compile Include="DataBase\MySQLNoError.cs" />
+    <Compile Include="DataBase\MySQLWithError.cs" />
+    <Compile Include="DataBase\Oracle.cs" />
+    <Compile Include="DataBase\OracleErrorType.cs" />
+    <Compile Include="DataBase\OracleTopN.cs" />
+    <Compile Include="DataBase\PostgreSQL.cs" />
+    <Compile Include="DataBase\PostgreSQLCollactions.cs" />
+    <Compile Include="DataBase\PostgreSQLErrorType.cs" />
+    <Compile Include="DataBase\Schema.cs" />
+    <Compile Include="DataBase\Types.cs" />
+    <Compile Include="DataGP.cs" />
+    <Compile Include="DataSearch.cs" />
+    <Compile Include="DebugWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebugWin.Designer.cs">
+      <DependentUpon>DebugWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dumper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dumper.Designer.cs">
+      <DependentUpon>Dumper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DumpExporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DumpExporter.Designer.cs">
+      <DependentUpon>DumpExporter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DumpGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DumpGrid.Designer.cs">
+      <DependentUpon>DumpGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DumpLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DumpLoading.Designer.cs">
+      <DependentUpon>DumpLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DUX4\Main.cs" />
+    <Compile Include="DUX4\My\MyApplication.cs" />
+    <Compile Include="DUX4\My\MyComputer.cs" />
+    <Compile Include="DUX4\My\MyProject.cs" />
+    <Compile Include="DUX4\My\MySettings.Designer.cs">
+      <DependentUpon>MySettings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="DUX4\My\MySettingsProperty.cs" />
+    <Compile Include="DUX4\My\Resources\Resources.cs" />
+    <Compile Include="Exporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exporter.Designer.cs">
+      <DependentUpon>Exporter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="HTTP.cs" />
+    <Compile Include="HTTPExt.cs" />
+    <Compile Include="HttpLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HttpLog.Designer.cs">
+      <DependentUpon>HttpLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImpBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImpBox.Designer.cs">
+      <DependentUpon>ImpBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Link.cs" />
+    <Compile Include="ListViewExt.cs" />
+    <Compile Include="LoginFinder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFinder.Designer.cs">
+      <DependentUpon>LoginFinder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="My\MySettings.Designer.cs">
+      <DependentUpon>MySettings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NewSocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewSocks.Designer.cs">
+      <DependentUpon>NewSocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ns0\AssemblyInfoAttribute.cs" />
+    <Compile Include="ns0\Class0.cs" />
+    <Compile Include="ns0\Class1.cs" />
+    <Compile Include="ns0\Class10.cs" />
+    <Compile Include="ns0\Class11.cs" />
+    <Compile Include="ns0\Class12.cs" />
+    <Compile Include="ns0\Class13.cs" />
+    <Compile Include="ns0\Class14.cs" />
+    <Compile Include="ns0\Class15.cs" />
+    <Compile Include="ns0\Class16.cs" />
+    <Compile Include="ns0\Class17.cs" />
+    <Compile Include="ns0\Class2.cs" />
+    <Compile Include="ns0\Class22.cs" />
+    <Compile Include="ns0\Class23.cs" />
+    <Compile Include="ns0\Class24.cs" />
+    <Compile Include="ns0\Class25.cs" />
+    <Compile Include="ns0\Class26.cs" />
+    <Compile Include="ns0\Class29.cs" />
+    <Compile Include="ns0\Class35.cs" />
+    <Compile Include="ns0\Class37.cs" />
+    <Compile Include="ns0\Class38.cs" />
+    <Compile Include="ns0\Class39.cs" />
+    <Compile Include="ns0\Class40.cs" />
+    <Compile Include="ns0\Class50.cs" />
+    <Compile Include="ns0\Class51.cs" />
+    <Compile Include="ns0\Class52.cs" />
+    <Compile Include="ns0\Class54.cs" />
+    <Compile Include="ns0\Class55.cs" />
+    <Compile Include="ns0\Class6.cs" />
+    <Compile Include="ns0\Class7.cs" />
+    <Compile Include="ns0\Class8.cs" />
+    <Compile Include="ns0\Class9.cs" />
+    <Compile Include="ns0\Enum3.cs" />
+    <Compile Include="ns0\Interface0.cs" />
+    <Compile Include="OpenFilePreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenFilePreview.Designer.cs">
+      <DependentUpon>OpenFilePreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PathAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PathAdd.Designer.cs">
+      <DependentUpon>PathAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProxyType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProxyType.Designer.cs">
+      <DependentUpon>ProxyType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReExploiter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReExploiter.Designer.cs">
+      <DependentUpon>ReExploiter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegExp.cs" />
+    <Compile Include="RegExpResult.cs" />
+    <Compile Include="ScrollingBoxCtrl\ScrollingBox.cs" />
+    <Compile Include="ScrollingBoxCtrl\ScrollingBoxCollection.cs" />
+    <Compile Include="ScrollingBoxCtrl\ScrollingBoxImage.cs" />
+    <Compile Include="ScrollingBoxCtrl\ScrollingBoxItem.cs" />
+    <Compile Include="ScrollingBoxCtrl\ScrollingBoxText.cs" />
+    <Compile Include="SearchColumn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchColumn.Designer.cs">
+      <DependentUpon>SearchColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEngine.cs" />
+    <Compile Include="SocksCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SocksCheck.Designer.cs">
+      <DependentUpon>SocksCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControlExt.cs" />
+    <Compile Include="TabPageExt.cs" />
+    <Compile Include="Taskbar\Manager.cs" />
+    <Compile Include="Taskbar\ProgressBarState.cs" />
+    <Compile Include="ThreadPool.cs" />
+    <Compile Include="ToolStripControl.cs" />
+    <Compile Include="ToolStripSpringTextBox.cs" />
+    <Compile Include="Translate.cs" />
+    <Compile Include="TranslateLNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TranslateLNG.Designer.cs">
+      <DependentUpon>TranslateLNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreeViewExt.cs" />
+    <Compile Include="ucLNG.cs" />
+    <Compile Include="UpdateProg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateProg.Designer.cs">
+      <DependentUpon>UpdateProg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Updater.cs" />
+    <Compile Include="UxTabControl.cs" />
+    <Compile Include="UxTabControlHelpers\GdiMemoryContext.cs" />
+    <Compile Include="UxTabControlHelpers\NativeMethods.cs" />
+    <Compile Include="VectorsAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VectorsAdd.Designer.cs">
+      <DependentUpon>VectorsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WafAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WafAdd.Designer.cs">
+      <DependentUpon>WafAdd.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddURLs.resources" />
+    <EmbeddedResource Include="Aluminum.bin" />
+    <EmbeddedResource Include="Ambient Blue.bin" />
+    <EmbeddedResource Include="Analizer.resources" />
+    <EmbeddedResource Include="AntiXero.bin" />
+    <EmbeddedResource Include="Classic 2k.bin" />
+    <EmbeddedResource Include="Classic Reload.bin" />
+    <EmbeddedResource Include="Dark.bin" />
+    <EmbeddedResource Include="Darkode.bin" />
+    <EmbeddedResource Include="DebugWin.resources" />
+    <EmbeddedResource Include="Dumper.resources" />
+    <EmbeddedResource Include="DumpExporter.resources" />
+    <EmbeddedResource Include="DumpGrid.resources" />
+    <EmbeddedResource Include="DumpLoading.resources" />
+    <EmbeddedResource Include="Duo.bin" />
+    <EmbeddedResource Include="DUX4\Resources.resources" />
+    <EmbeddedResource Include="Exporter.resources" />
+    <EmbeddedResource Include="HttpLog.resources" />
+    <EmbeddedResource Include="Human.bin" />
+    <EmbeddedResource Include="HydraBlue.bin" />
+    <EmbeddedResource Include="ImpBox.resources" />
+    <EmbeddedResource Include="Kemikal.bin" />
+    <EmbeddedResource Include="Klarheit.bin" />
+    <EmbeddedResource Include="LoginFinder.resources" />
+    <EmbeddedResource Include="MainForm.resources" />
+    <EmbeddedResource Include="NewSocks.resources" />
+    <EmbeddedResource Include="Office Blue.bin" />
+    <EmbeddedResource Include="Office Silver.bin" />
+    <EmbeddedResource Include="OpenFilePreview.resources" />
+    <EmbeddedResource Include="OSX Brushed.bin" />
+    <EmbeddedResource Include="OSX iTunes.bin" />
+    <EmbeddedResource Include="OSX Leopard.bin" />
+    <EmbeddedResource Include="PathAdd.resources" />
+    <EmbeddedResource Include="ProxyType.resources" />
+    <EmbeddedResource Include="ReExploiter.resources" />
+    <EmbeddedResource Include="Resources.resources" />
+    <EmbeddedResource Include="SearchColumn.resources" />
+    <EmbeddedResource Include="SocksCheck.resources" />
+    <EmbeddedResource Include="Splash.resources" />
+    <EmbeddedResource Include="Sustenance.bin" />
+    <EmbeddedResource Include="TabControlExt.resources" />
+    <EmbeddedResource Include="TabPageExt.resources" />
+    <EmbeddedResource Include="Tener.bin" />
+    <EmbeddedResource Include="TranslateLNG.resources" />
+    <EmbeddedResource Include="Ubuntu.bin" />
+    <EmbeddedResource Include="ucLNG.resources" />
+    <EmbeddedResource Include="UpdateProg.resources" />
+    <EmbeddedResource Include="VectorsAdd.resources" />
+    <EmbeddedResource Include="WafAdd.resources" />
+    <EmbeddedResource Include="XP Gel.bin" />
+    <EmbeddedResource Include="XP Kupo.bin" />
+    <EmbeddedResource Include="XP Silver.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="DUX4\My\MySettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MySettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="My\MySettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MySettings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
