@@ -25,3 +25,6 @@ A penetration testing tool designed to scan and identify websites with vulnerabi
 
 ## Usage Responsibility:
 By accessing and using this tool, you acknowledge that you are solely responsible for your actions. Any misuse of this software is strictly prohibited, and the creator disclaims any responsibility for how this tool is utilized. You are fully accountable for ensuring that your usage complies with all applicable laws and regulations in your jurisdiction.
+
+
+SQLi-Dumper v10.6
